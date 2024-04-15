@@ -26,13 +26,14 @@ connectDB();
 const app = express();
 
 // Middleware configuration
+app.use(cors);
 app.use(express.json());  // Parse incoming JSON data in the request body
 app.use(morgan('dev'));   // Configure logging of HTTP requests in development mode
 
 // Route configuration
-app.use('/api/v1/auth', authRoutes);   // Map authentication routes to /api/v1/auth
-app.use('/api/v1/category', categoryRoutes);   // Map category routes to /api/v1/category
-app.use('/api/v1/product', productRoutes);     // Map product routes to /api/v1/product
+app.use('https://plantx1.onrender.com/api/v1/auth', authRoutes);   // Map authentication routes to https://plantx1.onrender.com/api/v1/auth
+app.use('https://plantx1.onrender.com/api/v1/category', categoryRoutes);   // Map category routes to https://plantx1.onrender.com/api/v1/category
+app.use('https://plantx1.onrender.com/api/v1/product', productRoutes);     // Map product routes to https://plantx1.onrender.com/api/v1/product
 
 app.use(express.static(path.join(__dirname, '/client/public')))
 
