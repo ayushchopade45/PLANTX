@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://plantx1.onrender.com",
+  "proxy": "https://plantx-1bx1.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

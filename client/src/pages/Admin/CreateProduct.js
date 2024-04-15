@@ -21,7 +21,7 @@ const CreateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://plantx1.onrender.com/api/v1/category/get-category");
+      const { data } = await axios.get("https://plantx-1bx1.onrender.com/api/v1/category/get-category");
       console.log("Data Category In create Product = ", data);
       if (data?.sucess) {
         setCategories(data?.category);
@@ -49,7 +49,7 @@ const CreateProduct = () => {
       productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
-        "https://plantx1.onrender.com/api/v1/product/create-product",
+        "https://plantx-1bx1.onrender.com/api/v1/product/create-product",
         productData
       );
       if (data?.success) {

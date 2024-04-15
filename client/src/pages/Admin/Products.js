@@ -10,7 +10,7 @@ const Products = () => {
   //getall products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("https://plantx1.onrender.com/api/v1/product/get-product");
+      const { data } = await axios.get("https://plantx-1bx1.onrender.com/api/v1/product/get-product");
       console.log("Data in Products Admin = ", data);
       setProducts(data?.products);
     } catch (error) {
@@ -40,7 +40,7 @@ const Products = () => {
               >
                 <div className="card m-2" style={{ width: "18rem" }}>
                   <img
-                    src={`https://plantx1.onrender.com/api/v1/product/product-photo/${p._id}`}
+                    src={`https://plantx-1bx1.onrender.com/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />
